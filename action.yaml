@@ -1,0 +1,17 @@
+name: Dump Context
+
+description: Dumps workflow context
+
+inputs: {}
+
+outputs: {}
+
+runs:
+  using: composite
+  steps:
+    - run: env
+    - run: echo '${{ toJSON(github) }}'
+    - run: echo '${{ toJSON(env) }}'
+    - run: echo '${{ toJSON(vars) }}'
+    - run: echo '${{ toJSON(secrets) }}'
+    - run: gh version
