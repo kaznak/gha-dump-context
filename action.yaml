@@ -14,26 +14,39 @@ runs:
   using: composite
   steps:
     - run: env
+      shell: bash
     - name: toJSON(inputs)
       run: echo '${{ toJSON(inputs) }}'
+      shell: bash
     - name: toJSON(github)
       run: echo '${{ toJSON(github) }}'
+      shell: bash
     - name: toJSON(env)
       run: echo '${{ toJSON(env) }}'
+      shell: bash
     - name: toJSON(vars)
       run: echo '${{ toJSON(vars) }}'
+      shell: bash
     - name: toJSON(secrets)
       run: echo '${{ toJSON(secrets) }}'
+      shell: bash
     - name: toJSON(job)
       run: echo '${{ toJSON(job) }}'
+      shell: bash
     - name: toJSON(steps)
       run: echo '${{ toJSON(steps) }}'
+      shell: bash
     - name: toJSON(runner)
       run: echo '${{ toJSON(runner) }}'
+      shell: bash
     - name: toJSON(strategy)
       run: echo '${{ toJSON(strategy) }}'
+      shell: bash
     - name: toJSON(matrix)
       run: echo '${{ toJSON(matrix) }}'
+      shell: bash
     - name: toJSON(needs)
       run: echo '${{ toJSON(needs) }}'
+      shell: bash
     - run: gh version
+      shell: bash
