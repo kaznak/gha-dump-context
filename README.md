@@ -1,6 +1,8 @@
 # gha-dump-context
 Github Actions that Dumps Actions Contexts
 
+This is [a composit action](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action).
+
 This action does not dump vars, secrets and needs.
 Your should use reusable workflow.
 
